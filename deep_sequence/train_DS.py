@@ -2,6 +2,10 @@
 ENVIRONMENT = deep_sequence
 Depends on having deep_sequence downloaded at /home/bjarke/Desktop/MLDEcode/deep_sequence/
 Also depends on changes implemented in said deep sequence download (in particular in the helper.py file)
+
+Dataset should be placed in datasets under /home/bjarke/Desktop/MLDEcode/deep_sequence/DeepSequence/examples/datasets/
+
+Output parameters are placed under params.
 """
 
 import numpy as np
@@ -9,11 +13,11 @@ import time
 import sys
 sys.path.insert(0, "/home/bjarke/Desktop/MLDEcode/deep_sequence/DeepSequence/DeepSequence/")
 sys.path.insert(0, "/home/bjarke/Desktop/MLDEcode/deep_sequence/DeepSequence/DeepSequence/examples")
+
 import model
 import helper
 import train
 
-data_params = {"dataset"           :   "BLAT_ECOLX"}
 data_params = {"dataset"           :   "Gb1"}
 
 model_params = {
@@ -37,7 +41,7 @@ model_params = {
     }
 
 train_params = {
-    "num_updates"       :   300000,
+    "num_updates"       :   5000,
     "save_progress"     :   True,
     "verbose"           :   True,
     "save_parameters"   :   False,
